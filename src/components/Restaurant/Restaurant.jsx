@@ -18,8 +18,8 @@ const Restaurant = () => {
         .then(data => setMeals(data))
     } ,[]);
 
-    const handleAddToCart = (food) => {
-        const newCart = [...cart, food];
+    const handleAddToCart = (meal) => {
+        const newCart = [...cart, meal];
         setCart(newCart)
     }
 
@@ -30,6 +30,7 @@ const Restaurant = () => {
                    allMeals?.map(meal => <Meals
                    key={meal.id}
                    meal={meal}
+                   handleAddToCart={handleAddToCart}
                    ></Meals>)
                 }
             </div>

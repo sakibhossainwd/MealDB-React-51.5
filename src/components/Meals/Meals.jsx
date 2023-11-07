@@ -4,7 +4,8 @@ import  './Meals.css'
 
 const Meals = (props) => {
     // console.log(props.meal)
-    const {strMealThumb, strMeal, strCategory, strYoutube} = props.meal
+    const {strMealThumb, strMeal, strCategory, strYoutube} = props.meal;
+    const handleAddToCart = props.handleAddToCart
 
 
     return (
