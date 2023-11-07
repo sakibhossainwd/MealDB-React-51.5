@@ -2,25 +2,22 @@
 import React, { useEffect, useState } from 'react';
 
 
-
-
 const Restaurant = () => {
-    const [foods, setFoods] = useState([]);
-    console.log(foods.meals)
+    const [meals, setMeals] = useState([]);
+    const Meals = meals.meals
+    console.log(Meals)
 
     useEffect ( () => {
         fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=chicken')
         .then(res => res.json())
-        .then(data => setFoods(data))
+        .then(data => setMeals(data))
     } ,[])
 
     return (
            <div className="restaurant-container">
             <div className="foods-container">
 
-                { 
-                   
-                }
+                
             </div>
         </div>
     );

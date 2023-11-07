@@ -1,13 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import  './Meals.css'
 
-const Meal = (props) => {
-    console.log(props)
+const Meals = () => {
     return (
         <div>
-            <h2>tis is meal site</h2>
+            <h1>This is Meals site</h1>
         </div>
     );
 };
 
-export default Meal;
+export default Meals;
