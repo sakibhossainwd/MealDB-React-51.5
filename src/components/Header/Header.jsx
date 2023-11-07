@@ -7,7 +7,7 @@ const Header = () => {
         <div>
             <div className="header">
                 <div className="logo">
-                    <h2>MealBD</h2>
+                    <h2>MEAL-DB</h2>
                 </div>
                 <div className="input">
                     <input type="text" placeholder='search your food' />

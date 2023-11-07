@@ -9,6 +9,7 @@
 }
 .logo h2{
     margin-right: 30px;
+    color: rgb(247, 247, 247);
 }
 .input{
     display: flex;
