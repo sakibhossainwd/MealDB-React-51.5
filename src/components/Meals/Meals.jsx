@@ -3,11 +3,22 @@ import React from 'react';
 import  './Meals.css'
 
 const Meals = (props) => {
-    console.log(props)
+    // console.log(props.meal)
+    const {strMealThumb, strMeal, strCategory, strYoutube} = props.meal
+
+
     return (
-        <div>
-            <h1>This is Meals site</h1>
-        </div>
+            <div className="meal">
+                <img src={strMealThumb} alt="" />
+                <div className="meal-details">
+                    <h2>{strMeal}</h2>
+                    <h5>Category: {strCategory}</h5>
+                </div>
+                <div className="add-To-Cart">
+                    <button className='youtube'>Youtube</button>
+                    <button className='addToCart' onClick={() => handleAddToCart(props.meal)}>Add To Cart</button>
+                </div>
+            </div>
     );
 };
 

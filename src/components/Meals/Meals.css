@@ -1,0 +1,25 @@
+.meal{
+    width: 400px;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.meal img{
+    width: 390px;
+    height: 390px;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+}
+.add-To-Cart{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.youtube{
+    background: #c51919;
+}
+.addToCart{
+    background: #dfa833;
+}
