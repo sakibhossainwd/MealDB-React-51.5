@@ -1,0 +1,39 @@
+.header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.logo h2{
+    margin-right: 30px;
+}
+.input{
+    display: flex;
+}
+.input input{
+    background: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+}
+.input button {
+    background-color: #ec8815;
+    margin-left: 10px;
+    padding: 4px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+}
+.input button:hover{
+    border: none;
+    background-color: #be6f15;
+}
+.info a{
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+}
