@@ -5,18 +5,15 @@ import './Restaurant.css'
 import Cart from '../Cart/Cart';
 
 
-const Restaurant = () => {
-    const [meals, setMeals] = useState([]);
-    const allMeals = meals.meals
+const Restaurant = ({meals, setMeals, letter}) => {
 
     const [cart, setCart] = useState([]);
 
-
     useEffect ( () => {
-        fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=s')
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`)
         .then(res => res.json())
-        .then(data => setMeals(data))
-    } ,[]);
+        .then(data => setMeals(data.meals))
+    } ,[letter]);
 
     const handleAddToCart = (meal) => {
         const newCart = [...cart, meal];
@@ -27,8 +24,8 @@ const Restaurant = () => {
            <div className="restaurant-container">
             <div className="foods-container">
                 {
-                   allMeals?.map(meal => <Meals
-                   key={meal.id}
+                   meals?.map((meal, index) => <Meals
+                   key={index}
                    meal={meal}
                    handleAddToCart={handleAddToCart}
                    ></Meals>)

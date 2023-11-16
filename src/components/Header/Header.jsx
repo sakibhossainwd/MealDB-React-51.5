@@ -2,7 +2,25 @@
 import React from 'react';
 import './Header.css'
 
-const Header = () => {
+const Header = ({meals, setMeals, letter, setLetter}) => {
+    const handleSearch = ev => {
+        ev.preventDefault();
+        const form = ev.target;
+        const searchTxt = form.search.value;
+        console.log("Searched txt==========> ", searchTxt)
+        const filteredMeals = meals.filter(item=>item.strMeal.toLowerCase().includes(searchTxt.toLowerCase()));
+        // console.log('filtered=======> ', filteredMeals)
+        setMeals(filteredMeals)
+    }
+
+    const handleSearchByLetter = ev => {
+        ev.preventDefault();
+        const form = ev.target;
+        const searchTxt = form.search.value;
+        console.log("Searched txt==========> ", searchTxt)
+        setLetter(searchTxt)
+        
+    }
     return (
         <div>
             <div className="header">
@@ -10,8 +28,15 @@ const Header = () => {
                     <h2>MEAL-DB</h2>
                 </div>
                 <div className="input">
-                    <input type="text" placeholder='search your food' />
-                    <button>Search</button>
+                    <form action="" onSubmit={handleSearch}>
+                        <input type="text" name="search" placeholder='search your food' />
+                        <button>Search</button>
+                    </form>
+
+                    <form action="" onSubmit={handleSearchByLetter}>
+                        <input type="text" name="search" placeholder='search your food' />
+                        <button>Search By Letter</button>
+                    </form>
                 </div>
                 <div className="info">
                     <a href="#">Home</a>
